@@ -1,5 +1,8 @@
 package com.ngs.stash.externalhooks.hook;
 
+import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
+import com.atlassian.upm.api.license.PluginLicenseManager;
+
 import com.atlassian.bitbucket.hook.repository.*;
 import com.atlassian.bitbucket.repository.*;
 import com.atlassian.bitbucket.setting.*;
@@ -21,10 +24,15 @@ import java.util.List;
 import java.util.LinkedList;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class ExternalPreReceiveHook
     implements PreRepositoryHook<RepositoryHookRequest>, RepositorySettingsValidator
 {
+	@Autowired
+    private License license;
+
+
     private static Logger log = Logger.getLogger(
         ExternalPreReceiveHook.class.getSimpleName()
     );

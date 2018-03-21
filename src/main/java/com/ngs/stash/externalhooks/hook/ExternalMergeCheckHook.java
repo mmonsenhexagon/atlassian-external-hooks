@@ -22,17 +22,8 @@ import java.util.Set;
 import java.util.ArrayList;
 import com.atlassian.bitbucket.pull.*;
 import com.ngs.stash.externalhooks.hook.helpers.*;
-// import com.google.common.base.Predicate;
-// import static com.google.common.base.Charsets.UTF_8;
-// import static com.google.common.base.Joiner.on;
-// import static com.google.common.base.Throwables.propagate;
-// import static com.google.common.collect.Iterables.filter;
-// import static com.google.common.collect.Iterables.transform;
-// import static com.google.common.collect.Lists.newArrayList;
-// import static com.google.common.collect.Ordering.usingToString;
 import static com.ngs.stash.externalhooks.hook.ExternalMergeCheckHook.REPO_PROTOCOL.http;
 import static com.ngs.stash.externalhooks.hook.ExternalMergeCheckHook.REPO_PROTOCOL.ssh;
-
 
 public class ExternalMergeCheckHook
     implements RepositoryMergeCheck, RepositorySettingsValidator
